@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+<script>
+/////////////////////////////////
+function Mammal (species, diet){
+    this.species = species;
+    this.diet = diet;
+};
+Mammal.prototype.type = "Mammal";
+Mammal.prototype.description = function(){
+    console.log("A ${this.species} is a ${this.diet}")
+};
+let Giraffe = new Mammal("Giraffe", "herbivore");
+let Lion = new Mammal("Lion", "Carnivore");
+let Bird = new Mammal("Bird", "Omnivore");
+let Human = new Mammal ("Human", "Omnivore");
+Human.description = function(){
+    console.log("Humans are weird")
+};
+/////////////////////////////////
+
+    
+    
+var frontendReg = /Front/g;
+var frontendtest = "This is a part of Front End Development";
+console.log(frontendtest.search(frontendReg));
+console.log(frontendtest.match(frontendReg));
+frontendtest.replace("Front", "Back");
+console.log(frontendtest);
+    
+var numberReg = /[0-9]/g;
+var numbertest1 = 1236751627831579;
+var numbertest2 = "one two three";
+var numbertest3 = "A diaglogue needs at least 2 people";
+console.log(numberReg.test(numbertest3));
+</script>     
+</body>
+</html>
